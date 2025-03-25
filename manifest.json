@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "KaTeX Direction Fixer",
+  "version": "1.0",
+  "description": "Adds dir='ltr' to all span elements with class 'katex'.",
+  "content_scripts": [
+    {
+      "matches": ["https://gemini.google.com/*", "https://chatgpt.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": ["scripting"]
+}
